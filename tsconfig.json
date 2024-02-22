@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "types": ["mongoose"],
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*.ts",
+    "Back-end/**/*.ts"
+  ]
+}
