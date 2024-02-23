@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/mydatabase');
+// mongoose.connect('mongodb://localhost:27017/mydatabase');
+mongoose.connect('mongodb+srv://siteartgr:mongodbpass@cluster0.f13dxaw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 app.use('/customers', customerRoutes);
 app.use('/products', productRoutes);
