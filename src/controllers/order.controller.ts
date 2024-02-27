@@ -25,10 +25,10 @@ const getAllOrdersForCustomer = async (req: Request, res: Response) => {
 
 const createOrderForCustomer = async (req: Request, res: Response) => {
  ;
-  const { customerId, products, orderDate } = req.body;
+  const { customerId, products, orderDate, customerName } = req.body;
 
   try {
-    const newOrder: OrderModel = new Order({ customer: customerId, products, orderDate /*, other fields */ });
+    const newOrder: OrderModel = new Order({ customer: customerId, products, orderDate, customerName });
     const savedOrder = await newOrder.save();
 
     res.status(201).json(savedOrder);
