@@ -24,8 +24,8 @@ const getAllOrdersForCustomer = async (req: Request, res: Response) => {
 };
 
 const createOrderForCustomer = async (req: Request, res: Response) => {
-  const customerId = req.params.customerId;
-  const { products, orderDate } = req.body;
+ ;
+  const { customerId, products, orderDate } = req.body;
 
   try {
     const newOrder: OrderModel = new Order({ customer: customerId, products, orderDate /*, other fields */ });
